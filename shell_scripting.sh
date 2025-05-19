@@ -12,8 +12,12 @@ echo "hello world"
 # echo "$person1:: Sorry, you carry on! I will come once you come back" 
 
 
-echo "please enter your pin number"
+# echo "please enter your pin number"
 
-read -s PIN
+# read -s PIN
 
-echo "here is your pin number: $PIN "
+# echo "here is your pin number: $PIN "
+
+movies = ("Final destination" "The Monkey King" "Rush Hour" "Stree2")
+
+echo first movie: ${movies[0]}
