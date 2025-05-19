@@ -27,4 +27,8 @@ NUMBER2=20
 
 SUM=$(($NUMBER1+$NUMBER2))
 
+TIMESTAMP=$(date)
+
 echo "sum value is : $SUM "
+
+echo "date is : $TIMESTAMP "
