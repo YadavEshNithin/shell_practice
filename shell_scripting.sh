@@ -18,6 +18,13 @@ echo "hello world"
 
 # echo "here is your pin number: $PIN "
 
-movies=("Final destination" "The Monkey King" "Rush Hour" "Stree2")
+# movies=("Final destination" "The Monkey King" "Rush Hour" "Stree2")
 
-echo "all movies : ${movies[@]}"
+# echo "all movies : ${movies[@]}"
+
+NUMBER1=10
+NUMBER2=20
+
+SUM=$NUMBER1+$NUMBER2
+
+echo "sum value is : $SUM "
