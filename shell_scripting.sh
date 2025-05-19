@@ -20,4 +20,4 @@ echo "hello world"
 
 movies = ("Final destination" "The Monkey King" "Rush Hour" "Stree2")
 
-echo first movie: ${movies[0]}
+echo "first movie: ${movies[0]}"
