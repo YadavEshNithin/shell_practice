@@ -18,6 +18,6 @@ echo "hello world"
 
 # echo "here is your pin number: $PIN "
 
-movies = ("Final destination" "The Monkey King" "Rush Hour" "Stree2")
+movies=("Final destination" "The Monkey King" "Rush Hour" "Stree2")
 
 echo "first movie: ${movies[0]}"
