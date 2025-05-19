@@ -2,8 +2,8 @@
 
 echo "hello world"
 
-person1=Trump
-person2=Musk
+person1=Modi
+person2=Putin
 
 echo "$person1:: Hey $person2, How are you?"
 echo "$person2:: Hello $person1, I am fine. How are you doing"
