@@ -14,6 +14,6 @@ echo "hello world"
 
 echo "please enter your pin number"
 
-read PIN
+read -s PIN
 
 echo "here is your pin number: $PIN "
