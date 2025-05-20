@@ -81,20 +81,20 @@ VALIDATE(){
         echo "$2 is failure"
         exit 1
     else
-        echo "$2 is success
+        echo "$2 is success"
     fi
 }
     
 
 
-dnf list installed nginx
+dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
-    echo "nginx is now installing..."
-    dnf install nginx -y
-    VALIDATE $? "nginx"
+    echo "mysql is now installing..."
+    dnf install mysql -y
+    VALIDATE $? "MYSQL"
     
 else
-    echo "ngixn alreeady installed"
+    echo "mysql alreeady installed"
 fi
