@@ -87,6 +87,20 @@ VALIDATE(){
     
 
 
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then
+    echo "mysql is now installing..."
+    dnf install mysql -y
+    VALIDATE $? "MYSQL"
+    
+else
+    echo "mysql alreeady installed"
+fi
+
+
+
 dnf list installed nginx
 
 if [ $? -ne 0 ]
@@ -97,4 +111,17 @@ then
     
 else
     echo "nginx alreeady installed"
+fi
+
+
+dnf list installed python3
+
+if [ $? -ne 0 ]
+then
+    echo "python is now installing..."
+    dnf install python3 -y
+    VALIDATE $? "python"
+    
+else
+    echo "python alreeady installed"
 fi
