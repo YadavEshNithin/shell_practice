@@ -114,14 +114,26 @@ else
 fi
 
 
-dnf list installed python3
+# dnf list installed python3
 
+# if [ $? -ne 0 ]
+# then
+#     echo "python is now installing..."
+#     dnf install python3 -y
+#     VALIDATE $? "python"
+    
+# else
+#     echo "python alreeady installed"
+# fi
+
+
+
+dnf list installed python3
 if [ $? -ne 0 ]
 then
-    echo "python is now installing..."
+    echo "python3 is not installed... going to install it"
     dnf install python3 -y
-    VALIDATE $? "python"
-    
+    VALIDATE $? "python3"
 else
-    echo "python alreeady installed"
+    echo "python3 is already installed...Nothing to do"
 fi
