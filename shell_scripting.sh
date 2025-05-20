@@ -84,34 +84,50 @@ VALIDATE(){
         echo "$2 is success"
     fi
 }
+
+PACKAGES=$("mysql" "redis" "nginx")
+
+for package in PACKAGES
+do 
+    dnf list installed $package
+
+    if [ $? -ne 0 ]
+    then
+        echo "$package is now installing..."
+        dnf install $package -y
+        VALIDATE $? "$package"
+    else
+        echo "$package alreeady installed"
+    fi
+done
     
 
 
-dnf list installed mysql
+# dnf list installed mysql
 
-if [ $? -ne 0 ]
-then
-    echo "mysql is now installing..."
-    dnf install mysql -y
-    VALIDATE $? "MYSQL"
+# if [ $? -ne 0 ]
+# then
+#     echo "mysql is now installing..."
+#     dnf install mysql -y
+#     VALIDATE $? "MYSQL"
     
-else
-    echo "mysql alreeady installed"
-fi
+# else
+#     echo "mysql alreeady installed"
+# fi
 
 
 
-dnf list installed nginx
+# dnf list installed nginx
 
-if [ $? -ne 0 ]
-then
-    echo "nginx is now installing..."
-    dnf install nginx -y
-    VALIDATE $? "nginx"
+# if [ $? -ne 0 ]
+# then
+#     echo "nginx is now installing..."
+#     dnf install nginx -y
+#     VALIDATE $? "nginx"
     
-else
-    echo "nginx alreeady installed"
-fi
+# else
+#     echo "nginx alreeady installed"
+# fi
 
 
 # dnf list installed python3
@@ -127,13 +143,3 @@ fi
 # fi
 
 
-
-dnf list installed python3
-if [ $? -ne 0 ]
-then
-    echo "python3 is not installed... going to install it"
-    dnf install python3 -y
-    VALIDATE $? "python3"
-else
-    echo "python3 is already installed...Nothing to do"
-fi
