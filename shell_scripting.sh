@@ -85,7 +85,7 @@ then
         echo "mysql is failed"
         exit 1
     else
-        ech "mysql is success"
+        echo "mysql is success"
     fi
 else
     echo "mysql alreeady installed"
