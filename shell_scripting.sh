@@ -91,7 +91,6 @@ PACKAGES=("mysql" "redis" "nginx")
 for package in PACKAGES
 do 
     dnf list installed $package
-
     if [ $? -ne 0 ]
     then
         echo "$package is now installing..."
