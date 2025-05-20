@@ -85,7 +85,8 @@ VALIDATE(){
     fi
 }
 
-PACKAGES=$("mysql" "redis" "nginx")
+PACKAGES=("mysql" "redis" "nginx")
+
 
 for package in PACKAGES
 do 
