@@ -88,7 +88,7 @@ VALIDATE(){
 PACKAGES=("mysql" "redis" "nginx")
 
 
-for package in PACKAGES
+for package in ${PACKAGES[@]}
 do 
     dnf list installed $package
     if [ $? -ne 0 ]
