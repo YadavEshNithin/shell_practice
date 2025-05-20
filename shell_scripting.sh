@@ -22,13 +22,71 @@ echo "hello world"
 
 # echo "all movies : ${movies[@]}"
 
-NUMBER1=10
-NUMBER2=20
+# NUMBER1=10
+# NUMBER2=20
 
-SUM=$(($NUMBER1+$NUMBER2))
+# SUM=$(($NUMBER1+$NUMBER2))
 
-TIMESTAMP=$(date)
+# TIMESTAMP=$(date)
 
-echo "sum value is : $SUM "
+# echo "sum value is : $SUM "
 
-echo "date is : $TIMESTAMP "
+# echo "date is : $TIMESTAMP "
+
+#!/bin/bash
+
+# echo "All variables passed to the script: $@"
+# echo "Number of variables: $#"
+# echo "Script name: $0"
+# echo "Current Directory: $PWD"
+# echo "User running this script: $USER"
+# echo "Home directory of user: $HOME"
+# echo "PID of the script: $$"
+# sleep 10 &
+# echo "PID of last command in background: $!"
+
+
+#!/bin/bash
+
+# NUMBER=$1
+
+# -gt --> greater than
+# -lt --> less than
+# -eq --> equal
+# -ne --> not equal
+
+# if [ $NUMBER -lt 10 ]
+# then
+#     echo "Given number $NUMBER is less than 10"
+# else
+#     echo "Given number $NUMBER is not less than 10"
+# fi
+
+
+
+Userid=$(id -u)
+
+if [ $Userid -ne 0 ]
+then
+    echo "error no root access, please go with root access"
+    exit 1
+else
+    echo "you are having root access"
+fi
+
+dnf list installed mysql
+
+if [ $? -ne 0]
+then
+    echo "mysql is now installing..."
+    dnf install mysql -y
+    if [ $? -ne 0]
+    then
+        echo "mysql is failed"
+        exit 1
+    else
+        ech "mysql is success"
+    fi
+else
+    echo "mysql alreeady installed"
+fi
