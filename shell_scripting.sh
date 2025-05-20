@@ -85,7 +85,7 @@ VALIDATE(){
     fi
 }
 
-PACKAGES=("mysql" "redis" "nginx" "mongod")
+PACKAGES=("mysql" "redis" "nginx" "mongodb-org -y")
 
 
 for package in ${PACKAGES[@]}
